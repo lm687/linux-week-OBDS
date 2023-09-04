@@ -45,6 +45,37 @@ mamba create -n peaktools_env
 mamba activate peaktools_env
 ```
 
+Installing packages
+```
+mamba install deeptools
+mamba install samtools bedtools
+```
+
+Creating another package
+```
+mamba deactivate
+mamba create -n test_tools_env samtools bedtools
+```
+... and deleting it
+
+```
+mamba deactivate
+mamba remove --name test_tools_env --all
+mamba env list
+```
+
+Create an environment fron a yaml file
+```
+mamba env create -f obds-rnaseq.yml
+mamba activate obds-rnaseq
+```
+
+Update `~/.bash_aliases`
+
+```
+alias load_mamba='source /home/imm/clab0651/mamba_installation/conda/etc/profile.d/conda.sh && source /home/imm/clab0651/mamba_installation/conda/etc/profile.d/mamba.sh && mamba activate base && mamba activate obds-rnaseq'
+```
+
 ## Rstudio
 Need to download file `obds-connect-rstudio.sh`, which I have had to modify. The file reads
 

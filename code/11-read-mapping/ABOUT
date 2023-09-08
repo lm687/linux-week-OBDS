@@ -1,0 +1,9 @@
+## Pre-built index can also be downloaded from the HISAT website:
+## https://daehwankimlab.github.io/hisat2/download/#m-musculus
+
+## Check the length of reads of a file:
+zcat ../../resources/1_linux/rnaseq/test_fastq/ERR1755082_1.fastq.gz | awk 'NR % 4 == 2' | awk '{ print length }' | sort | uniq
+zcat ../../resources/1_linux/rnaseq/ERR1755082_1.fastq.gz | awk 'NR % 4 == 2' | awk '{ print length }' | sort | uniq
+
+
+

@@ -35,7 +35,7 @@
 
 ## Capture the terminal output and save any error messages. This is very useful
 ## if you have problems and need to ask for help.
-#SBATCH --output=%j_%x.out
+#SBATCH --output=hisat-index-%j_%x.out
 #SBATCH --error=%
 ##########################################################################
 
@@ -68,4 +68,9 @@ hisat2-build /storage/clab0651/genomes/Mus_musculus/Ensembl/GRCm38/Sequence/Mus_
 echo '/storage/clab0651/genomes/Mus_musculus/Ensembl/GRCm38/Sequence/HISAT/mm10' created
 
 ##########################################################################
+
+## PRE-MADE GENOME:
+## https://daehwankimlab.github.io/hisat2/download/
+
+
 

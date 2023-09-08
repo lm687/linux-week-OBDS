@@ -1,0 +1,37 @@
+########################################################################################
+## Hard links
+########################################################################################
+
+## some_file is an original file with some text
+
+## we create a hard link as follows:
+
+ln some_file link_some_file
+
+## we modify the hard link
+
+vim link_some_file 
+
+## we can see how both link_some_file and some_file have been modified
+
+
+## With a hard link, the permissions, link count, ownership, timestamps, and file content are the exact same. If the original file is deleted, the data still exists under the secondary hard link. 
+
+## If you find two files with identical properties but are unsure if they are hard-linked, use the ls -i command to view the inode number. Files that are hard-linked together share the same inode number.
+
+## An inode is a data structure that keeps track of all the files and directories within a Linux or UNIX-based filesystem. So, every file and directory in a filesystem is allocated an inode, which is identified by an integer known as “inode number”. These unique identifiers store metadata about each file and directory.
+
+## They can only be created for regular files (not directories or special files).
+
+########################################################################################
+# Soft links
+########################################################################################
+
+## symbolic links, soft links link together non-regular and regular files
+
+## If the original file is deleted, the soft link is broken. This situation is referred to as a dangling soft link.
+
+
+
+
+
